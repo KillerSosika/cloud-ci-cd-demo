@@ -23,7 +23,7 @@ jobs:
         run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "dasakaton" --password-stdin
 
       - name: Завантаження Docker-образу з Docker Hub
-        run: docker pull dasaskaton/app:latest
+        run: docker pull dasakaton/app:latest
 
       - name: Деплой у Kubernetes
         run: |
