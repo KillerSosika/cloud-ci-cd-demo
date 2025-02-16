@@ -20,7 +20,7 @@ jobs:
           aws eks update-kubeconfig --region ${{ secrets.AWS_REGION }} --name confused-jazz-otter
 
       - name: Логін у Docker Hub
-        run: echo "${{ secrets.DOCKER_PASSWORD}}" | docker login -u "dasakaton" --password-stdin
+        run: echo "${{secrets.DOCKER_PASSWORD}}" | docker login -u "dasakaton" --password-stdin
 
       - name: Завантаження Docker-образу з Docker Hub
         run: docker pull dasaskaton/app:latest
